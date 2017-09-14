@@ -1,4 +1,9 @@
 <h1>{{title}}</h1>
+<ul class="primordial-dieties">
+  <li *ngFor="let god of gods">
+    <span class="badge">{{god.id}}</span> {{god.name}}
+  </li>
+</ul>
 <h2>{{god.name}} details</h2>
 <div>
   <label>id: </label> {{god.id}}
