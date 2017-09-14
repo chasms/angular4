@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+export class God {
+  id: number;
+  name: string;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +11,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'The Pantheon';
-  hero = "Xa'0s";
+  god: God = {
+    id: 1,
+    name: "Xáos"
+  };
 }
-
-
