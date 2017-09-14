@@ -1,22 +1,11 @@
 <h1>{{title}}</h1>
 <ul class="gods">
-  <li *ngFor="let god of gods" (click)="onSelect(god)">
+  <li *ngFor="let god of gods"
+    [class.selected]="god === selectedGod"
+    (click)="onSelect(god)"
+  >
     <span class="badge">{{god.id}}</span> {{god.name}}
   </li>
 </ul>
-<h2>{{god.name}} details</h2>
-<div>
-  <label>id: </label> {{god.id}}
-</div>
-<div>
-  <label>name: </label>
-  <input [(ngModel)]="god.name" placeholder="name">
-</div>
-<div>
-  <label>description: </label>
-  <textarea
-    [(ngModel)]="god.description"
-    placeholder="description"
-    rows="10" cols="50"
-  ></textarea>
-</div>
+
+<god-detail [god]="selectedGod"></god-detail>

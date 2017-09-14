@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 
-export class God {
-  id: number;
-  name: string;
-  description: string;
-}
+import { God } from './god';
 
 const GODS: God[] = [
-  { id: 1,
+  {
+    id: 1,
     name: 'Chaos',
     description: `In Greek mythology, Chaos (Greek: Χάος), according to Hesiod,Chaos ("Chasm") was the first thing to exist: "at first Chaos came to be" (or was) "but next" (possibly out of Chaos) came Gaia, Tartarus, and Eros (elsewhere the son of Aphrodite). Unambiguously born "from Chaos" were Erebus (Darkness) and Nyx (Night).`,
   },
@@ -92,5 +89,9 @@ const GODS: God[] = [
 export class AppComponent {
   title = 'The Pantheon';
   gods = GODS;
-  god = GODS[0];
+  selectedGod: God;
+
+  onSelect(god: God): void {
+    this.selectedGod = god;
+  }
 }

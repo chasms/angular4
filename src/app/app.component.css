@@ -1,6 +1,9 @@
 .selected {
-    background-color: #CFD8DC !important;
     color: white;
+    left: 1em !important;
+}
+.selected .badge {
+    background-color: #0099FF !important;
 }
 h1 {
     font-family: monospace;
@@ -17,7 +20,7 @@ h1 {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #EEE;
+    background-color: whitesmoke;
     margin: .5em;
     height: 40px;
     border-radius: 4px;
@@ -31,8 +34,8 @@ h1 {
 }
 .gods li:hover {
     color: #0099FF;
-    background-color: #DDD;
-    left: .5em;
+    background-color: #BBD8DC;
+    left: 1em;
 }
 .gods .badge {
     display: inline-block;
