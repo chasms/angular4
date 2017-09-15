@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { GodDetailComponent } from './god-detail/god-detail.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GodDetailComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		GodDetailComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

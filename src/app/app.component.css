@@ -1,52 +1,52 @@
 .selected {
-    color: white;
-    left: 1em !important;
+	color: white;
+	left: 1em !important;
 }
 .selected .badge {
-    background-color: #0099FF !important;
+	background-color: #0099FF !important;
 }
 h1 {
-    font-family: monospace;
-    font-size: 48px;
-    font-weight: 100;    
+	font-family: monospace;
+	font-size: 48px;
+	font-weight: 100;    
 }
 .gods {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
+	margin: 0 0 2em 0;
+	list-style-type: none;
+	padding: 0;
+	width: 15em;
 }
 .gods li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: whitesmoke;
-    margin: .5em;
-    height: 40px;
-    border-radius: 4px;
-    color: lightseagreen;
-    transition: all .25s ease-in-out;
-    font-family: monospace;
+	cursor: pointer;
+	position: relative;
+	left: 0;
+	background-color: whitesmoke;
+	margin: .5em;
+	height: 40px;
+	border-radius: 4px;
+	color: lightseagreen;
+	transition: all .25s ease-in-out;
+	font-family: monospace;
 }
 .gods li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
+	background-color: #BBD8DC !important;
+	color: white;
 }
 .gods li:hover {
-    color: #0099FF;
-    background-color: #BBD8DC;
-    left: 1em;
+	color: #0099FF;
+	background-color: #BBD8DC;
+	left: 1em;
 }
 .gods .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    background-color: black;
-    line-height: 40px;
-    position: relative;
-    height: 40px;
-    width: 40px;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-    text-align: center;
+	display: inline-block;
+	font-size: small;
+	color: white;
+	background-color: black;
+	line-height: 40px;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	margin-right: .8em;
+	border-radius: 4px 0 0 4px;
+	text-align: center;
 }

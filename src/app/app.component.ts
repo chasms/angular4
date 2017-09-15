@@ -2,96 +2,29 @@ import { Component } from '@angular/core';
 
 import { God } from './god';
 
-const GODS: God[] = [
-  {
-    id: 1,
-    name: 'Chaos',
-    description: `In Greek mythology, Chaos (Greek: Χάος), according to Hesiod,Chaos ("Chasm") was the first thing to exist: "at first Chaos came to be" (or was) "but next" (possibly out of Chaos) came Gaia, Tartarus, and Eros (elsewhere the son of Aphrodite). Unambiguously born "from Chaos" were Erebus (Darkness) and Nyx (Night).`,
-  },
-  {
-    id: 2,
-    name: 'Aether',
-    description: ``,
-  },
-  {
-    id: 3,
-    name: 'Aion',
-    description: ``,
-  },
-  {
-    id: 4,
-    name: 'Ananke',
-    description: ``,
-  },
-  {
-    id: 5,
-    name: 'Chronos',
-    description: ``,
-  },
-  {
-    id: 6,
-    name: 'Erebus',
-    description: ``,
-  },
-  {
-    id: 7,
-    name: 'Eros',
-    description: ``,
-  },
-  {
-    id: 8,
-    name: 'Gaia',
-    description: ``,
-  },
-  {
-    id: 9,
-    name: 'Hemera',
-    description: ``,
-  },
-  {
-    id: 10,
-    name: 'Nyx',
-    description: ``,
-  },
-  {
-    id: 11,
-    name: 'Phanes',
-    description: ``,
-  },
-  {
-    id: 12,
-    name: 'Pontus',
-    description: ``,
-  },
-  {
-    id: 13,
-    name: 'Tartarus',
-    description: ``,
-  },
-  {
-    id: 14,
-    name: 'Thalassa',
-    description: ``,
-  },
-  {
-    id: 15,
-    name: 'Uranus',
-    description: ``,
-  },
-];
+import { GodService } from './god.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css'],
+	providers: [GodService],
 })
 
 export class AppComponent {
-  title = 'The Pantheon';
-  gods = GODS;
-  selectedGod: God;
+	title = 'The Pantheon';
+	gods: God[];
+	selectedGod: God;
 
-  onSelect(god: God): void {
-    this.selectedGod = god;
-  }
+	constructor(private godService: GodService) { }
+
+	ngOnInit(): void{}
+
+	getGods(): void {
+		this.gods = this.godService.getGods();
+	}
+
+	onSelect(god: God): void {
+		this.selectedGod = god;
+	}
 }

@@ -1,11 +1,8 @@
 <h1>{{title}}</h1>
 <ul class="gods">
-  <li *ngFor="let god of gods"
-    [class.selected]="god === selectedGod"
-    (click)="onSelect(god)"
-  >
-    <span class="badge">{{god.id}}</span> {{god.name}}
-  </li>
+	<li *ngFor="let god of gods" [class.selected]="god === selectedGod" (click)="onSelect(god)">
+		<span class="badge">{{god.id}}</span> {{god.name}}
+	</li>
 </ul>
 
 <god-detail [god]="selectedGod"></god-detail>
